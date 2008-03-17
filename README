@@ -6,10 +6,11 @@ of Fortran runtime libraries. The problem is their location
 and name varies with each OS/compiler combination!
 
 Build requirements:
-  cygwin-1.5.24-2
-  cygport-0.2.11-1
+  cygwin-1.5.25-7
+  cygport-0.3.9-1
+  gcc-g77-3.4.4-3
   make-3.81-1
-  perl-5.8.7-5
+  perl-5.10.0-3
 
 Canonical homepage:
   http://search.cpan.org/~kgb/ExtUtils-F77/
@@ -20,34 +21,34 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack perl-ExtUtils-F77-1.16-1-src.tar.bz2
+  unpack perl-ExtUtils-F77-1.16-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./perl-ExtUtils-F77-1.16-1.cygport all
+  cygport ./perl-ExtUtils-F77-1.16-X.cygport all
 
 This will create:
-  /usr/src/perl-ExtUtils-F77-1.16-1-src.tar.bz2
-  /usr/src/perl-ExtUtils-F77-1.16-1.tar.bz2
+  /usr/src/perl-ExtUtils-F77-1.16-X-src.tar.bz2
+  /usr/src/perl-ExtUtils-F77-1.16-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary package:
 
-  /etc/postinstall/perl-ExtUtils-F77.sh
-  /usr/lib/perl5/vendor_perl/5.8/ExtUtils/._F77.pm
-  /usr/lib/perl5/vendor_perl/5.8/ExtUtils/F77.pm
-  /usr/lib/perl5/vendor_perl/5.8/cygwin/auto/ExtUtils/F77/.packlist
-  /usr/share/doc/Cygwin/perl-ExtUtils-F77-1.16.README
+  /usr/lib/perl5/vendor_perl/5.10/ExtUtils/._F77.pm
+  /usr/lib/perl5/vendor_perl/5.10/ExtUtils/F77.pm
+  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/auto/ExtUtils/F77/.packlist
   /usr/share/doc/perl-ExtUtils-F77-1.16/COPYING
   /usr/share/doc/perl-ExtUtils-F77-1.16/Changes
   /usr/share/doc/perl-ExtUtils-F77-1.16/README
   /usr/share/man/man3/ExtUtils.F77.3pm.gz
-  /usr/share/perl/cygwin-pods/5.8/ExtUtils-F77.pod
 
 ------------------
 
 Port Notes:
+
+----- version 1.16-2 -----
+Rebuilt for perl-5.10.
 
 ----- version 1.16-1 -----
 Version bump.
