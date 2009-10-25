@@ -6,11 +6,10 @@ of Fortran runtime libraries. The problem is their location
 and name varies with each OS/compiler combination!
 
 Build requirements:
-  cygwin-1.5.25-7
-  cygport-0.3.9-1
-  gcc-g77-3.4.4-3
+  cygwin-1.7.0-62
+  cygport-0.9.10-1
   make-3.81-1
-  perl-5.10.0-3
+  perl-5.10.0-5
 
 Canonical homepage:
   http://search.cpan.org/~kgb/ExtUtils-F77/
@@ -33,31 +32,10 @@ This will create:
 
 -------------------------------------------
 
-Files included in the binary package:
-
-  /usr/lib/perl5/vendor_perl/5.10/ExtUtils/._F77.pm
-  /usr/lib/perl5/vendor_perl/5.10/ExtUtils/F77.pm
-  /usr/lib/perl5/vendor_perl/5.10/i686-cygwin/auto/ExtUtils/F77/.packlist
-  /usr/share/doc/perl-ExtUtils-F77-1.16/COPYING
-  /usr/share/doc/perl-ExtUtils-F77-1.16/Changes
-  /usr/share/doc/perl-ExtUtils-F77-1.16/README
-  /usr/share/man/man3/ExtUtils.F77.3pm.gz
-
-------------------
-
 Port Notes:
 
------ version 1.16-2 -----
-Rebuilt for perl-5.10.
-
------ version 1.16-1 -----
-Version bump.
-
------ version 1.15-1 -----
-Version bump.
-
------ version 1.14-1 -----
-Initial release for Cygwin.
+----- version 1.16-3 -----
+Initial release for Cygwin 1.7 and GCC 4.3.
 
 
 Cygwin port maintained by:

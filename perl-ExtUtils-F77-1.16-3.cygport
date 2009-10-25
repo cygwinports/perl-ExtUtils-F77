@@ -1,0 +1,4 @@
+CPAN_AUTHOR=kgb
+inherit perl
+
+PATCH_URI="1.16-gfortran.patch"

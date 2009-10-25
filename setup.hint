@@ -1,5 +1,5 @@
 category: Perl Devel
-requires: perl gcc-g77
+requires: perl gcc4-fortran
 sdesc: "Perl module for linking C with Fortran subroutines"
 ldesc: "This module tries to figure out how to link C programs with
 Fortran subroutines on your system. Basically one must add a list
