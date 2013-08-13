@@ -1,0 +1,35 @@
+--- origsrc/ExtUtils-F77-1.17/F77.pm	2010-12-31 19:53:06.000000000 -0600
++++ src/ExtUtils-F77-1.17/F77.pm	2013-08-13 16:58:42.089191800 -0500
+@@ -260,27 +260,16 @@ $F77config{Generic}{GNU}{Link}   = link_
+ $F77config{Generic}{GNU}{Compiler} = find_in_path('g77', "$gfortran", 'g95','fort77');
+ $F77config{Generic}{DEFAULT}     = 'GNU';
+ 
+-### cygwin ###
+-#"-lg2c -lm";
+-# needed this on my cygwin system to get things working properly
+-sub getcyglink {
+-   return join ' ', map {my $lp = `g77 -print-file-name=lib$_.a`;
+-			$lp =~ s|/[^/]+$||;
+-			 $lp =~ s|L([a-z,A-Z]):|L//$1|g;
+-			 "-L$lp -l$_"} qw/g2c m/;
+-}
+-
+-$F77config{Cygwin}{G77}{Trail_} = 1;
+-$F77config{Cygwin}{G77}{Compiler} = 'g77';
+-$F77config{Cygwin}{G77}{Cflags} = '-O';
+-$F77config{Cygwin}{G77}{Link}	= \&getcyglink;
+-$F77config{Cygwin}{DEFAULT}	= 'G77';
+-
+ ### Linux ###
+ 
+ $F77config{Linux}{GNU}     = $F77config{Generic}{GNU};
+ $F77config{Linux}{DEFAULT} = 'GNU';
+ 
++### Cygwin ###
++
++$F77config{Cygwin}{GNU}      = $F77config{Generic}{GNU};
++$F77config{Cygwin}{DEFAULT}  = 'GNU';
++
+ ### DEC OSF/1 ###
+ 
+ $F77config{Dec_osf}{F77}{Link}   = "-L/usr/lib -lUfor -lfor -lFutil -lm -lots -lc";

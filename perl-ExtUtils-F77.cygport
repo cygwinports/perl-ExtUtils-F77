@@ -1,0 +1,15 @@
+CPAN_AUTHOR=kgb
+inherit perl
+
+NAME="perl-ExtUtils-F77"
+VERSION=1.17
+RELEASE=1
+CATEGORY="Perl Devel"
+SUMMARY="Perl module for linking C with Fortran subroutines"
+DESCRIPTION="This module tries to figure out how to link C programs with
+Fortran subroutines on your system. Basically one must add a list of Fortran
+runtime libraries. The problem is their location and name varies with each
+OS/compiler combination!"
+REQUIRES="gcc-fortran"
+
+PATCH_URI="1.17-gfortran.patch"
